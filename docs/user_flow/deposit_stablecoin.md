@@ -1,7 +1,5 @@
 # Deposit Stablecoin
 
-## Overview
-
 Depositing stablecoin is the first step in the SuperCluster user journey. Users deposit USDC into the SuperCluster protocol to start earning yield while maintaining liquidity through receipt tokens.
 
 ## What Happens When You Deposit?
@@ -55,26 +53,19 @@ Once the transaction is confirmed:
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#0b84ba','primaryTextColor':'#ffffff','primaryBorderColor':'#0a7098','lineColor':'#ffffff','secondaryColor':'#0a7098','tertiaryColor':'#08506e'}}}%%
-flowchart LR
-    A["<b>User Wallet</b><br/>━━━━━━━━━━<br/>USDC on Mantle Network<br/>Ready to Deposit"]
-    B["<b>SuperCluster Contract</b><br/>━━━━━━━━━━<br/>Smart Contract Handler<br/>Receive & Mint Process"]
-    C["<b>sUSDC Token</b><br/>━━━━━━━━━━<br/>Yield-bearing Token<br/>1:1 Ratio with USDC"]
-    D["<b>Pilot Strategy</b><br/>━━━━━━━━━━<br/>Automated Allocation<br/>Optimize Yield Distribution"]
-    E["<b>Aave Protocol</b><br/>━━━━━━━━━━<br/>Lending Platform<br/><span style='font-size:1.2em'>60% Allocation</span>"]
-    F["<b>Morpho Protocol</b><br/>━━━━━━━━━━<br/>Optimized Lending<br/><span style='font-size:1.2em'>40% Allocation</span>"]
+flowchart TD
+    A["User Wallet (USDC)"]
+    B["SuperCluster Contract"]
+    C["Mint sUSDC"]
+    D["Pilot Strategy"]
+    E["Aave (60%)"]
+    F["Morpho (40%)"]
 
-    A -->|"&nbsp;&nbsp;<b>STEP 1</b>&nbsp;&nbsp;<br/>&nbsp;&nbsp;Approve USDC&nbsp;&nbsp;"| B
-    B -->|"&nbsp;&nbsp;<b>STEP 2</b>&nbsp;&nbsp;<br/>&nbsp;&nbsp;Transfer USDC&nbsp;&nbsp;"| D
-    B -->|"&nbsp;&nbsp;<b>STEP 3</b>&nbsp;&nbsp;<br/>&nbsp;&nbsp;Mint sUSDC&nbsp;&nbsp;"| C
-    D -->|"&nbsp;&nbsp;<b>STEP 4</b>&nbsp;&nbsp;<br/>&nbsp;&nbsp;Deploy Funds&nbsp;&nbsp;"| E
-    D -->|"&nbsp;&nbsp;<b>STEP 4</b>&nbsp;&nbsp;<br/>&nbsp;&nbsp;Deploy Funds&nbsp;&nbsp;"| F
-
-    style A fill:#0b84ba,stroke:#ffffff,stroke-width:2px,color:#ffffff,rx:20,ry:20
-    style B fill:#0b84ba,stroke:#ffffff,stroke-width:2px,color:#ffffff,rx:20,ry:20
-    style C fill:#0a7098,stroke:#ffffff,stroke-width:2px,color:#ffffff,rx:20,ry:20
-    style D fill:#0b84ba,stroke:#ffffff,stroke-width:2px,color:#ffffff,rx:20,ry:20
-    style E fill:#08506e,stroke:#ffffff,stroke-width:2px,color:#ffffff,rx:20,ry:20
-    style F fill:#08506e,stroke:#ffffff,stroke-width:2px,color:#ffffff,rx:20,ry:20
+    A --> B
+    B --> C
+    B --> D
+    D --> E
+    D --> F
 ```
 
 ## What You Get
@@ -140,18 +131,6 @@ Your 10,000 USDC Deposit:
 - No single point of failure
 - Multi-protocol risk distribution
 
-## Example Scenario
-
-**Sarah wants to earn yield on her USDC:**
-
-1. **Sarah has:** 5,000 USDC on Mantle Network
-2. **Sarah deposits:** 5,000 USDC into SuperCluster
-3. **Sarah receives:** 5,000 sUSDC immediately
-4. **Sarah's USDC is allocated:**
-   - 2,000 USDC → Aave (60%)
-   - 1,500 USDC → Morpho (40%)
-5. **Result:** Sarah starts earning yield from 2 protocols while maintaining full liquidity
-
 ## Gas Costs
 
 **Estimated Gas:**
@@ -160,31 +139,5 @@ Your 10,000 USDC Deposit:
 - Subsequent deposits: Lower (deposit only)
 
 **Tip:** Consider depositing larger amounts to optimize gas efficiency.
-
-## Next Steps
-
-After depositing:
-
-1. **[Receive sUSDC](./mint_s_usdc.md)** - Your liquid saving tokens are minted
-2. **[Wrap to wsUSDC](./wrap_ws_usdc.md)** (Optional) - Convert to non-rebasing token
-3. **[Earn Yield](./yield_accrual.md)** - Watch your balance grow through rebase
-4. **[Use in DeFi](./use_in_defi.md)** - Deploy your tokens in other protocols
-
-## FAQ
-
-**Q: Is there a minimum deposit amount?**  
-A: To be defined in production. During hackathon, no minimum.
-
-**Q: Can I deposit other stablecoins?**  
-A: Currently only USDC. Future versions may support USDT, DAI, etc.
-
-**Q: When do I start earning yield?**  
-A: Immediately after your deposit is confirmed and allocated.
-
-**Q: Can I withdraw anytime?**  
-A: Yes, via two-step withdrawal or instant DEX swap.
-
-**Q: Is my deposit safe?**  
-A: Your USDC is allocated to established, audited protocols. See [Risk Management](../protocol_mechanic/risk_and_safety_model.md) for details.
 
 **Ready to deposit?** Connect your wallet and start earning stable, liquid yield today.

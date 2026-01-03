@@ -1,34 +1,26 @@
 # Final Withdraw
 
-## Overview
-
 Complete guide to claiming your USDC after withdrawal request is ready.
 
 ## Claiming Process
 
 ### Prerequisites
 
-✅ Withdrawal request submitted  
-✅ Status: Ready to Claim  
-✅ Have request ID  
-✅ Wallet connected  
-✅ Have MNT for gas
+- Withdrawal request submitted
+- Status: Ready to Claim
+- Have request ID
+- Wallet connected
+- Have MNT for gas
+  ![Alt text](/img/request-withdrawals.png)
 
 ### Steps
 
-1. Check withdrawal status in dashboard
+1. Check the withdrawal status on the Withdrawals page (claim withdrawals tab)
 2. Click "Claim Now" button
 3. Confirm transaction in wallet
 4. Receive USDC in your wallet
 
-## After Withdrawal
-
-Your withdrawn USDC options:
-
-- Hold as stablecoin
-- Re-deposit to SuperCluster
-- Deploy in other DeFi protocols
-- Off-ramp to fiat
+![Alt text](/img/claim-withdrawals.png)
 
 ## Verification
 

@@ -1,7 +1,5 @@
 # Use in DeFi
 
-## Overview
-
 One of SuperCluster's most powerful features is the **composability** of sUSDC and wsUSDC tokens. You can use these liquid saving tokens across DeFi protocols while continuously earning yield from SuperCluster.
 
 **Key Benefit:** Double-dip yield strategies - earn SuperCluster base yield PLUS returns from other protocols.
@@ -20,15 +18,15 @@ One of SuperCluster's most powerful features is the **composability** of sUSDC a
 
 ## Token Compatibility Matrix
 
-| DeFi Category         | sUSDC Compatible?  | wsUSDC Compatible? | Recommended |
-| --------------------- | ------------------ | ------------------ | ----------- |
-| **DEX Trading**       | ⚠️ Limited         | ✅ Full            | wsUSDC      |
-| **Liquidity Pools**   | ⚠️ May have issues | ✅ Full            | wsUSDC      |
-| **Lending Platforms** | ❌ Not supported   | ✅ Full            | wsUSDC      |
-| **Yield Aggregators** | ⚠️ Complex         | ✅ Full            | wsUSDC      |
-| **Stablecoin Swaps**  | ✅ OK              | ✅ OK              | Either      |
-| **Simple Holding**    | ✅ Perfect         | ✅ OK              | sUSDC       |
-| **NFT Purchases**     | ✅ OK              | ✅ OK              | Either      |
+| DeFi Category         | sUSDC Compatible? | wsUSDC Compatible? | Recommended |
+| --------------------- | ----------------- | ------------------ | ----------- |
+| **DEX Trading**       | Limited           | Full               | wsUSDC      |
+| **Liquidity Pools**   | May have issues   | Full               | wsUSDC      |
+| **Lending Platforms** | Not supported     | Full               | wsUSDC      |
+| **Yield Aggregators** | Complex           | Full               | wsUSDC      |
+| **Stablecoin Swaps**  | OK                | OK                 | Either      |
+| **Simple Holding**    | Perfect           | OK                 | sUSDC       |
+| **NFT Purchases**     | OK                | OK                 | Either      |
 
 **General Rule:** Use **wsUSDC** for maximum DeFi compatibility.
 
@@ -94,22 +92,16 @@ Health Factor: Improved!
 
 ### Benefits
 
-✅ **Maintain SuperCluster yield**  
-✅ **Borrow without selling**  
-✅ **Self-improving collateral** (value increases over time)  
-✅ **Capital efficiency**
+- **Maintain SuperCluster yield**
+- **Borrow without selling**
+- **Self-improving collateral** (value increases over time)
+- **Capital efficiency**
 
 ### Risks
 
-⚠️ **Liquidation risk** if borrowed asset appreciates significantly  
-⚠️ **Interest on borrowed amount**  
-⚠️ **Smart contract risk** from both protocols
-
-### Recommended Platforms
-
-- **Aave** - Established lending protocol
-- **Compound** - Large liquidity pools
-- **Radiant** - Cross-chain lending (if available on Mantle)
+- **Liquidation risk** if borrowed asset appreciates significantly
+- **Interest on borrowed amount**
+- **Smart contract risk** from both protocols
 
 ## Use Case 2: Liquidity Provision
 
@@ -123,12 +115,12 @@ Provide liquidity in DEX pools to earn trading fees while maintaining SuperClust
 
 ```
 ┌───────────────────────┐
-│  Uniswap V3 Pool       │
-│                        │
-│  50% wsUSDC (5,000)    │
-│  50% USDC (5,000)      │
-│                        │
-│  Your LP Position      │
+│  Uniswap V3 Pool      │
+│                       │
+│  50% wsUSDC (5,000)   │
+│  50% USDC (5,000)     │
+│                       │
+│  Your LP Position     │
 └───────────────────────┘
          │
          v
@@ -163,26 +155,6 @@ LP incentives: ~300 USDC
 Total value: ~10,750 USDC
 Total APY: ~7.5%
 ```
-
-### Impermanent Loss Consideration
-
-**Why wsUSDC/USDC is Safe:**
-
-```
-wsUSDC tracks USDC value closely:
-- Both are stablecoin-based
-- wsUSDC value slowly appreciates (1.00 → 1.05)
-- Minimal price divergence
-- Very low impermanent loss
-
-Expected IL: < 0.1% (negligible)
-```
-
-### Recommended DEXs
-
-- **Uniswap V3** - Concentrated liquidity
-- **Curve** - Optimized for stable assets
-- **Balancer** - Flexible pool ratios
 
 ## Use Case 3: Yield Aggregator Strategies
 
@@ -227,9 +199,9 @@ Total: ~13% APY (higher risk)
 
 ### Risk Warning
 
-⚠️ **Complexity risk** - Multiple protocols = multiple failure points  
-⚠️ **Smart contract risk** - Each layer adds exposure  
-⚠️ **Yield sustainability** - Aggressive strategies may not be sustainable
+- **Complexity risk** - Multiple protocols = multiple failure points
+- **Smart contract risk** - Each layer adds exposure
+- **Yield sustainability** - Aggressive strategies may not be sustainable
 
 ## Use Case 4: Stable Swap Arbitrage
 
@@ -382,196 +354,6 @@ Expected combined APY: 7-9%
 Annual revenue on 10M: 700-900K USDC
 ```
 
-## Advanced Strategies
-
-### Strategy 1: Leveraged Yield Farming
-
-```
-Step 1: Deposit 10,000 USDC → Get 10,000 sUSDC
-Step 2: Wrap to wsUSDC
-Step 3: Deposit wsUSDC to Aave as collateral
-Step 4: Borrow 6,000 USDC (60% LTV)
-Step 5: Deposit borrowed USDC to SuperCluster
-Step 6: Repeat (carefully!)
-
-Effective APY: 7-10% (with 1.6x leverage)
-Risk: Liquidation if SuperCluster has losses
-```
-
-### Strategy 2: Delta-Neutral Farming
-
-```
-Objective: Earn yield without market exposure
-
-Step 1: Hold 10,000 wsUSDC
-Step 2: Short 10,000 USDC worth of volatile asset
-Step 3: Earn funding rate + SuperCluster yield
-Step 4: Market-neutral position
-
-Expected APY: 5-8% (depending on funding rates)
-```
-
-### Strategy 3: Recursive Collateral
-
-```
-Maximize capital efficiency:
-
-1. Deposit: 10,000 USDC → wsUSDC
-2. Use as collateral, borrow USDC
-3. Deposit borrowed USDC → more wsUSDC
-4. Use new wsUSDC as collateral
-5. Repeat carefully
-
-Max leverage: 2.5x (safe limit)
-APY boost: 1.5-2x
-```
-
-## Gas Optimization Strategies
-
-### Batch Operations
-
-```
-Inefficient:
-1. Deposit USDC (gas: 100K)
-2. Wrap to wsUSDC (gas: 80K)
-3. Deposit to Aave (gas: 150K)
-Total: 330K gas
-
-Efficient:
-1. Deposit, wrap, and transfer in one transaction
-Total: 250K gas (24% savings)
-```
-
-### Optimal Timing
-
-- Execute during low network activity
-- Batch multiple actions together
-- Use multicall contracts when available
-
-## Integration Examples
-
-### Example 1: Aave Integration
-
-```solidity
-// 1. Wrap sUSDC to wsUSDC
-sUSDC.approve(address(wsUSDC), amount);
-wsUSDC.wrap(amount);
-
-// 2. Approve Aave
-wsUSDC.approve(address(aavePool), wsUSDCAmount);
-
-// 3. Supply as collateral
-aavePool.supply(
-    address(wsUSDC),
-    wsUSDCAmount,
-    msg.sender,
-    0
-);
-
-// 4. Borrow USDC
-aavePool.borrow(
-    address(USDC),
-    borrowAmount,
-    2, // variable rate
-    0,
-    msg.sender
-);
-```
-
-### Example 2: Uniswap V3 LP
-
-```solidity
-// 1. Prepare tokens
-wsUSDC.approve(address(nonfungiblePositionManager), amount0);
-USDC.approve(address(nonfungiblePositionManager), amount1);
-
-// 2. Mint LP position
-INonfungiblePositionManager.MintParams memory params =
-    INonfungiblePositionManager.MintParams({
-        token0: address(wsUSDC),
-        token1: address(USDC),
-        fee: 500, // 0.05%
-        tickLower: -100,
-        tickUpper: 100,
-        amount0Desired: amount0,
-        amount1Desired: amount1,
-        amount0Min: 0,
-        amount1Min: 0,
-        recipient: msg.sender,
-        deadline: block.timestamp
-    });
-
-nonfungiblePositionManager.mint(params);
-```
-
-## Monitoring Your DeFi Positions
-
-### Track Multiple Positions
-
-```
-Your SuperCluster Holdings:
-├─ Direct: 5,000 sUSDC (5,250 USDC value)
-├─ Aave Collateral: 4,762 wsUSDC (5,000 USDC value)
-├─ Uniswap LP: 2,381 wsUSDC + 2,500 USDC
-└─ Yearn Vault: 1,000 wsUSDC (1,050 USDC value)
-
-Total SuperCluster Exposure: 13,143 sUSDC equivalent
-Total Value: ~13,800 USDC
-```
-
-### Use Portfolio Trackers
-
-**Recommended Tools:**
-
-- Zapper.fi
-- DeBank
-- Zerion
-- Custom dashboards
-
-## Risk Management
-
-### Diversification Across Protocols
-
-```
-Don't put all wsUSDC in one protocol:
-
-✅ Good:
-- 40% Direct holding (sUSDC)
-- 30% Aave collateral
-- 20% Uniswap LP
-- 10% Reserve
-
-❌ Bad:
-- 100% in one lending protocol
-- Single point of failure
-- Maximum risk exposure
-```
-
-### Monitor Health Factors
-
-**For Collateralized Positions:**
-
-```
-Safe: Health Factor > 2.0
-Caution: Health Factor 1.5 - 2.0
-Danger: Health Factor < 1.5
-Liquidation: Health Factor < 1.0
-
-Action: Regularly add collateral or repay debt
-```
-
-### Emergency Exit Strategy
-
-**If SuperCluster has issues:**
-
-```
-1. Stop new deposits
-2. Withdraw collateral from DeFi protocols
-3. Unwrap wsUSDC to sUSDC
-4. Request withdrawal from SuperCluster
-5. Or swap on DEX for immediate exit
-```
-
 ## Comparison: DeFi Usage vs Simple Holding
 
 | Scenario            | Base APY | Additional Yield  | Total APY | Risk Level |
@@ -583,59 +365,5 @@ Action: Regularly add collateral or repay debt
 | **Yearn Vault**     | 5%       | 2-3%              | 7-8%      | Medium     |
 | **Leveraged**       | 5%       | 3-5%              | 8-10%     | High       |
 | **Recursive**       | 5%       | 5-7%              | 10-12%    | Very High  |
-
-## Best Practices
-
-### ✅ Do's
-
-1. **Start simple** - Begin with direct holding before complex strategies
-2. **Understand risks** - Know each protocol's risks
-3. **Monitor positions** - Regular check-ins
-4. **Diversify** - Don't concentrate in one protocol
-5. **Use wsUSDC for DeFi** - Better compatibility
-6. **Test small amounts** - Before large deployments
-
-### ❌ Don'ts
-
-1. **Don't over-leverage** - Stay within safe LTV ratios
-2. **Don't ignore health factors** - Monitor collateralized positions
-3. **Don't blindly chase yield** - High APY = High risk
-4. **Don't forget about gas** - Factor in transaction costs
-5. **Don't use sUSDC where incompatible** - Wrap first
-6. **Don't forget tax implications** - Track all activity
-
-## Next Steps
-
-1. **[Request Withdrawal](./two_step_withdrawal.md)** - Exit DeFi positions when needed
-2. **[Final Withdrawal](./final_withdraw.md)** - Get your USDC back
-3. **[Risk Management](../protocol_mechanic/risk_and_safety_model.md)** - Understand protocol risks
-
-## FAQ
-
-**Q: Do I keep earning SuperCluster yield when using tokens in DeFi?**  
-A: Yes! Both sUSDC and wsUSDC continue earning SuperCluster base yield.
-
-**Q: Which is better for DeFi, sUSDC or wsUSDC?**  
-A: wsUSDC is recommended for most DeFi protocols due to better compatibility.
-
-**Q: Can I use sUSDC in Aave?**  
-A: Not recommended. Rebasing tokens have complex interactions. Use wsUSDC instead.
-
-**Q: What happens if the DeFi protocol I use gets hacked?**  
-A: You may lose funds in that protocol, but your underlying SuperCluster position may be protected depending on the hack.
-
-**Q: Can I leverage my position?**  
-A: Yes, but carefully. Use conservative LTV ratios and monitor health factors.
-
-**Q: How do I track all my positions?**  
-A: Use portfolio trackers like Zapper, DeBank, or Zerion.
-
-**Q: Is there a limit to how many protocols I can use?**  
-A: No limit, but more protocols = more complexity and risk.
-
-**Q: Can I provide liquidity with sUSDC?**  
-A: Possible but not recommended. Use wsUSDC for stable liquidity provision.
-
----
 
 **Unlock DeFi's full potential!** Use your SuperCluster tokens to build advanced yield strategies while maintaining liquidity.
