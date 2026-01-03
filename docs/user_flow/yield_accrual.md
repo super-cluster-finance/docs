@@ -30,17 +30,17 @@ Your Deposit (10,000 USDC)
        v
 Pilot Strategy Allocation
        │
-   ┌───┼───────┐
-   │   │       │
-   v   v       v
-40% 30%     20%    10%
-Aave Morpho Centauri Tumbuh
- 5%   6%     4.5%    7%
- │    │      │      │
- └────┼──────┼──────┘
-      │
-      v
-Blended APY: ~5.5%
+   ┌───┴───┐
+   │       │
+   v       v
+ 60%     40%
+Aave   Morpho
+ 5%      6%
+ │       │
+ └───┬───┘
+     │
+     v
+Blended APY: ~5.4%
 ```
 
 ### Yield Calculation
@@ -51,8 +51,8 @@ Blended APY: ~5.5%
 Blended APY = Σ (Allocation % × Protocol APY)
 
 Example:
-(40% × 5%) + (30% × 6%) + (20% × 4.5%) + (10% × 7%)
-= 2.0% + 1.8% + 0.9% + 0.7%
+(60% × 5%) + (40% × 6%)
+= 3.0% + 2.4%
 = 5.4% APY
 ```
 
@@ -77,10 +77,8 @@ Your Holdings:
 
 ```
 Adapters harvest yield from protocols:
-- Aave:     +2,000 USDC
-- Morpho:   +1,800 USDC
-- Centauri: +900 USDC
-- Tumbuh:   +700 USDC
+- Aave:     +3,000 USDC
+- Morpho:   +2,400 USDC
 -----------------------
 Total Yield: +5,400 USDC
 ```
@@ -310,8 +308,6 @@ function calculateTotalAssets() internal view returns (uint256) {
     // Sum from all adapters
     total += aaveAdapter.getTotalAssets();
     total += morphoAdapter.getTotalAssets();
-    total += centauriAdapter.getTotalAssets();
-    total += tumbuhAdapter.getTotalAssets();
 
     return total;
 }
@@ -383,24 +379,20 @@ The Pilot Strategy optimizes yield by rebalancing allocations:
 
 ```
 Protocol APY:
-- Aave:     5.0%  (40% allocation)
-- Morpho:   6.5%  (30% allocation)
-- Centauri: 4.0%  (20% allocation)
-- Tumbuh:   7.5%  (10% allocation)
+- Aave:     5.0%  (60% allocation)
+- Morpho:   6.5%  (40% allocation)
 
-Blended APY: 5.45%
+Blended APY: 5.6%
 ```
 
-**After Rebalance (Tumbuh APY increased):**
+**After Rebalance (Morpho APY increased):**
 
 ```
 New Allocation:
-- Aave:     35%  (5.0% APY)
-- Morpho:   30%  (6.5% APY)
-- Centauri: 15%  (4.0% APY)
-- Tumbuh:   20%  (7.5% APY) ← Increased!
+- Aave:     40%  (5.0% APY)
+- Morpho:   60%  (6.5% APY) ← Increased!
 
-New Blended APY: 5.90%
+New Blended APY: 5.9%
 ```
 
 **Result:** Higher yield for all users through automatic optimization.
