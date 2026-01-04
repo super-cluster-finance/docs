@@ -1,3 +1,7 @@
+---
+pagination_next: user_flow/mint_s_usdc
+---
+
 # Deposit Stablecoin
 
 Depositing stablecoin is the first step in the SuperCluster user journey. Users deposit USDC into the SuperCluster protocol to start earning yield while maintaining liquidity through receipt tokens.
@@ -27,7 +31,7 @@ When you deposit USDC into SuperCluster:
 USDC.approve(SuperClusterAddress, amount)
 ```
 
-**Why?** This is a standard security measure in DeFi - you must explicitly allow smart contracts to use your tokens.
+**Why?** This is a standard security measure in DeFi you must explicitly allow smart contracts to use your tokens.
 
 ### Step 3: Enter Deposit Amount
 
@@ -104,8 +108,8 @@ After you deposit:
 
 ```
 Your 10,000 USDC Deposit:
-- 60% → Aave (4,000 USDC)
-- 40% → Morpho (3,000 USDC)
+- 60% → Aave (6,000 USDC)
+- 40% → Morpho 4,000 USDC)
 ```
 
 ## Important Notes
