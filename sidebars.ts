@@ -11,7 +11,7 @@ import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
  The sidebars can be generated from the filesystem, or explicitly defined here.
 
  Create as many sidebars as you want.
- */
+ */ 
 const sidebars: SidebarsConfig = {
   tutorialSidebar: [
     {
@@ -25,7 +25,7 @@ const sidebars: SidebarsConfig = {
         "introduction/overview",
         "introduction/problem",
         "introduction/solution",
-        "introduction/who_is_this_for",
+        "introduction/who-is-this-for",
       ],
     },
     {
@@ -118,13 +118,14 @@ const sidebars: SidebarsConfig = {
       ],
     },
     {
+     
       type: "category",
       label: "Conclusion",
       link: {
         type: "doc",
         id: "conclusion/design_philosophy",
       },
-      items: ["conclusion/design_philosophy", "conclusion/whats_next"],
+      items: ["conclusion/design_philosophy", "conclusion/whats-next"],
     },
     "support",
   ],
