@@ -82,7 +82,7 @@ const config: Config = {
       title: "Supercluster",
       logo: {
         alt: "Supercluster Logo",
-        src: "img/logo.svg",
+        src: "img/logo.png",
       },
       items: [
         {
@@ -118,16 +118,12 @@ const config: Config = {
           title: "Community",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
-            },
-            {
               label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
+              href: "#",
             },
             {
               label: "X",
-              href: "https://x.com/docusaurus",
+              href: "https://x.com/SuperClusterApp",
             },
           ],
         },
@@ -136,12 +132,12 @@ const config: Config = {
           items: [
             {
               label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              href: "https://github.com/super-cluster-finance",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Supercluster.`,
     },
     prism: {
       theme: prismThemes.github,
