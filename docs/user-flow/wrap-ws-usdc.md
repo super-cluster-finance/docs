@@ -17,20 +17,6 @@ Wrapping converts your **sUSDC** (rebasing token) into **wsUSDC** (wrapped Super
 | **Composable**       | Yes, better DeFi compatibility   |
 | **Convertible**      | Can unwrap back to sUSDC anytime |
 
-## Why Wrap to wsUSDC?
-
-### DeFi Compatibility
-
-Many DeFi protocols don't support rebasing tokens. wsUSDC solves this:
-
-| Protocol Type            | sUSDC Compatible?   | wsUSDC Compatible?   |
-| ------------------------ | ------------------- | -------------------- |
-| DEX (Uniswap, Curve)     | Limited             | Full support         |
-| Lending (Aave, Compound) | Not supported       | Full support         |
-| Yield Aggregators        | May have issues     | Full support         |
-| Collateral Systems       | Complex integration | Standard integration |
-| NFT Protocols            | May not track       | Standard ERC-20      |
-
 ### Use Cases for wsUSDC
 
 **1. Collateral in Lending Protocols**
@@ -234,7 +220,7 @@ Day 365: After 1 year (rate: 1.05)
 
 - Wrap larger amounts to optimize gas per token
 - Batch operations when possible
-- Consider gas prices on Mantle Network
+- Consider gas prices on Lisk Network
 
 ## Advantages of wsUSDC
 

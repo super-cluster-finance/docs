@@ -18,29 +18,27 @@ One of SuperCluster's most powerful features is the **composability** of sUSDC a
 
 ## Token Compatibility Matrix
 
-| DeFi Category         | sUSDC Compatible? | wsUSDC Compatible? | Recommended |
-| --------------------- | ----------------- | ------------------ | ----------- |
-| **DEX Trading**       | Limited           | Full               | wsUSDC      |
-| **Liquidity Pools**   | May have issues   | Full               | wsUSDC      |
-| **Lending Platforms** | Not supported     | Full               | wsUSDC      |
-| **Yield Aggregators** | Complex           | Full               | wsUSDC      |
-| **Stablecoin Swaps**  | OK                | OK                 | Either      |
-| **Simple Holding**    | Perfect           | OK                 | sUSDC       |
-| **NFT Purchases**     | OK                | OK                 | Either      |
+| DeFi Category        | sUSDC Compatible? | wsUSDC Compatible? | Recommended |
+| -------------------- | ----------------- | ------------------ | ----------- |
+| **Compound Lending** | Not supported     | Full               | wsUSDC      |
+| **Dolomite Lending** | May have issues   | Full               | wsUSDC      |
+| **Stablecoin Swaps** | OK                | OK                 | Either      |
+| **Simple Holding**   | Perfect           | OK                 | sUSDC       |
+| **NFT Purchases**    | OK                | OK                 | Either      |
 
 **General Rule:** Use **wsUSDC** for maximum DeFi compatibility.
 
-## Use Case 1: Collateral for Borrowing
+## Use Case 1: Collateral for Borrowing (Compound)
 
 ### Overview
 
-Use wsUSDC as collateral to borrow other assets without selling your position.
+Use wsUSDC as collateral on Compound to borrow other assets without selling your position.
 
 ### How It Works
 
 ```
 1. You have: 10,000 wsUSDC (worth 10,500 USDC at 1.05 rate)
-2. Deposit wsUSDC to Aave as collateral
+2. Deposit wsUSDC to Compound as collateral
 3. Borrow: 6,000 USDC (60% LTV)
 4. Your wsUSDC continues earning SuperCluster yield
 5. As wsUSDC value increases, health factor improves
@@ -63,7 +61,7 @@ Wrap 10,000 sUSDC → Get 9,524 wsUSDC
 Value: 9,524 × 1.05 = 10,000 USDC
 ```
 
-**Step 2: Deposit to Aave**
+**Step 2: Deposit to Compound**
 
 ```
 Deposit: 9,524 wsUSDC
@@ -103,31 +101,30 @@ Health Factor: Improved!
 - **Interest on borrowed amount**
 - **Smart contract risk** from both protocols
 
-## Use Case 2: Liquidity Provision
+## Use Case 2: Additional Lending (Dolomite)
 
 ### Overview
 
-Provide liquidity in DEX pools to earn trading fees while maintaining SuperCluster yield.
+Deposit wsUSDC in Dolomite lending protocol to earn additional lending interest while maintaining SuperCluster yield.
 
-### Strategy: wsUSDC/USDC Pool
+### Strategy: wsUSDC as Collateral or Lending in Dolomite
 
-**Optimal Pair:** wsUSDC + USDC (correlated assets, low impermanent loss)
+**Optimal Use:** Deposit wsUSDC directly to Dolomite lending markets
 
 ```
-┌───────────────────────┐
-│  Uniswap V3 Pool      │
+┌──────────────────────┋
+│  Dolomite Lending    │
 │                       │
-│  50% wsUSDC (5,000)   │
-│  50% USDC (5,000)     │
+│  Deposit wsUSDC      │
+│  (10,000)            │
 │                       │
-│  Your LP Position     │
-└───────────────────────┘
+│  Your Position       │
+└──────────────────────┘
          │
          v
-  Triple Yield Source:
+  Dual Yield Source:
   1. SuperCluster yield on wsUSDC
-  2. Trading fees from swaps
-  3. Potential LP incentives
+  2. Dolomite lending APY
 ```
 
 ### Example Calculation
@@ -135,44 +132,41 @@ Provide liquidity in DEX pools to earn trading fees while maintaining SuperClust
 **Initial Position:**
 
 ```
-Provide liquidity:
-- 4,762 wsUSDC (worth 5,000 USDC at 1.05 rate)
-- 5,000 USDC
-- Total value: 10,000 USDC
+Deposit wsUSDC:
+- 10,000 wsUSDC (worth 10,500 USDC at 1.05 rate)
+- Dolomite lending APY: 4%
 ```
 
 **After 1 Year:**
 
 ```
 SuperCluster yield: 5% APY
-Trading fees: 2% APY
-LP incentives: 3% APY
+Dolomite lending APY: 4% APY
 
-wsUSDC value: 4,762 × 1.05 = 5,000 → 5,250 USDC
-Trading fees earned: ~200 USDC
-LP incentives: ~300 USDC
+wsUSDC value: 10,000 × 1.05 = 10,500 USDC
+Dolomite interest earned: ~420 USDC (4% of average balance)
 
-Total value: ~10,750 USDC
-Total APY: ~7.5%
+Total value: ~10,920 USDC
+Total APY: ~9.2%
 ```
 
-## Use Case 3: Yield Aggregator Strategies
+## Use Case 3: Borrowing Against wsUSDC (Dolomite)
 
 ### Overview
 
-Deposit wsUSDC into yield aggregators to stack multiple yield sources.
+Use wsUSDC as collateral on Dolomite to borrow other assets without selling your position, while continuing to earn yield.
 
-### Example: Yearn Finance Strategy
+### Example: Borrowing Against wsUSDC on Dolomite
 
 ```
-1. Deposit wsUSDC to Yearn Vault
-2. Yearn deploys wsUSDC to optimized strategies
+1. Deposit wsUSDC to Dolomite as collateral
+2. Borrow: USDC or other assets
 3. You earn:
    - SuperCluster base yield (5%)
-   - Yearn strategy returns (3-5%)
-   - Compounded automatically
+   - Interest on wsUSDC collateral (potential)
+   - Strategic use of borrowed assets
 
-Total APY: 8-10%
+Net APY: 5-7% (depending on borrowed asset usage)
 ```
 
 ### Strategy Stacking
@@ -181,20 +175,19 @@ Total APY: 8-10%
 
 ```
 Base: SuperCluster yield (5%)
- + Yearn optimization (2%)
- + Curve boost (1%)
+ + Dolomite lending APY (3%)
+ + Compound integration (1%)
 ------------------------
-Total: ~8% APY
+Total: ~9% APY
 ```
 
-**Aggressive Stack:**
+**Moderate Stack:**
 
 ```
 Base: SuperCluster yield (5%)
- + Leverage strategy (5%)
- + Incentive farming (3%)
+ + Dolomite lending (4%)
 ------------------------
-Total: ~13% APY (higher risk)
+Total: ~9% APY (moderate risk)
 ```
 
 ### Risk Warning
@@ -259,7 +252,7 @@ Bridge wsUSDC to other chains for cross-chain yield opportunities.
 **Phase 5 Roadmap:**
 
 ```
-Mantle Network (Base)
+Lisk Network
        │
        │ Bridge wsUSDC
        │
@@ -278,37 +271,37 @@ Use wsUSDC on each chain independently
 - Optimize gas costs
 - Diversify smart contract risk
 
-## Use Case 6: Collateral for Derivatives
+## Use Case 6: Advanced Strategies with Compound
 
 ### Overview
 
-Use wsUSDC as margin for perpetual futures or options.
+Use wsUSDC for advanced lending strategies on Compound.
 
-### Perpetual Futures Example
+### Compound Advanced Lending
 
 ```
-Platform: GMX (if available on Mantle)
+Platform: Compound Protocol
 
-Deposit: 10,000 wsUSDC as margin
-Leverage: 5x
-Position: Long ETH
+Deposit: 10,000 wsUSDC
+Strategy: Supply to optimized market
+Earnings:
 
 Benefits:
 - wsUSDC continues earning SuperCluster yield
-- Margin value increases over time (self-improving)
-- Access leveraged positions
+- Compound optimization for better rates
+- Access to efficient lending markets
 ```
 
-### Options Strategy
+### Multi-Protocol Stacking
 
 ```
-Sell Put Options:
-- Collateral: wsUSDC
-- Collect premium
-- If exercised: Acquire asset at strike
-- wsUSDC earns yield while waiting
+Advanced Strategy:
+- Deposit wsUSDC to Compound
+- Borrow USDC
+- Deposit additional wsUSDC to Dolomite
+- Earn multiple yields simultaneously
 
-Strategy: Generate income from both premium and yield
+Strategy: Generate income from base yield, lending, and protocol APYs
 ```
 
 ## Use Case 7: DAO Treasury Management
@@ -345,25 +338,23 @@ Risk: Inflation erodes value
 
 ```
 DAO Treasury Allocation:
-├─ 40% SuperCluster (base yield + liquidity)
-├─ 30% wsUSDC in lending (additional yield)
-├─ 20% wsUSDC/USDC LP (trading fees)
-└─ 10% Reserve (immediate liquidity)
+├─ 50% SuperCluster + Compound lending
+├─ 30% SuperCluster + Dolomite lending
+└─ 20% Reserve (immediate liquidity)
 
-Expected combined APY: 7-9%
-Annual revenue on 10M: 700-900K USDC
+Expected combined APY: 8-10%
+Annual revenue on 10M: 800-1000K USDC
 ```
 
 ## Comparison: DeFi Usage vs Simple Holding
 
-| Scenario            | Base APY | Additional Yield  | Total APY | Risk Level |
-| ------------------- | -------- | ----------------- | --------- | ---------- |
-| **Hold sUSDC**      | 5%       | 0%                | 5%        | Low        |
-| **Hold wsUSDC**     | 5%       | 0%                | 5%        | Low        |
-| **Aave Collateral** | 5%       | -2% (borrow cost) | 3%        | Medium     |
-| **Uniswap LP**      | 5%       | 2-4% (fees)       | 7-9%      | Medium     |
-| **Yearn Vault**     | 5%       | 2-3%              | 7-8%      | Medium     |
-| **Leveraged**       | 5%       | 3-5%              | 8-10%     | High       |
-| **Recursive**       | 5%       | 5-7%              | 10-12%    | Very High  |
+| Scenario             | Base APY | Additional Yield | Total APY | Risk Level |
+| -------------------- | -------- | ---------------- | --------- | ---------- |
+| **Hold sUSDC**       | 5%       | 0%               | 5%        | Low        |
+| **Hold wsUSDC**      | 5%       | 0%               | 5%        | Low        |
+| **Compound Lending** | 5%       | 1-2%             | 6-7%      | Medium     |
+| **Dolomite Lending** | 5%       | 2-3%             | 7-8%      | Medium     |
+| **Multi-Protocol**   | 5%       | 3-5%             | 8-10%     | High       |
+| **Advanced Stack**   | 5%       | 4-6%             | 9-11%     | Very High  |
 
 **Unlock DeFi's full potential!** Use your SuperCluster tokens to build advanced yield strategies while maintaining liquidity.

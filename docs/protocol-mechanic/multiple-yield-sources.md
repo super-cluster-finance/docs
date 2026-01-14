@@ -21,11 +21,11 @@ SuperCluster applies this same principle to DeFi lending.
 
 Your USDC earns interest from established lending platforms where borrowers pay to use stablecoins:
 
-**Morpho** — Efficient lending protocol with strong yields (typically 4-6% APY)  
-**Aave** — Largest DeFi lending platform with maximum security (typically 3-5% APY)
+**Compound** — Efficient lending protocol with strong yields (typically 4-6% APY)  
+**Dolomite** — Decentralized lending platform with advanced risk management (typically 5-7% APY)
 
 ```
-Your Deposit → SuperCluster → Split between Morpho & Aave → Borrowers pay interest → You earn yield
+Your Deposit → SuperCluster → Split between Compound & Dolomite → Borrowers pay interest → You earn yield
 ```
 
 **What you do:** Deposit once  
@@ -36,8 +36,7 @@ Your Deposit → SuperCluster → Split between Morpho & Aave → Borrowers pay 
 ### Better Returns
 
 Platforms offer different rates at different times. SuperCluster allocates more to higher-yielding platforms automatically.
-
-**Example:** If Aave offers 5% and Morpho offers 6%, more funds go to Morpho. When rates change, the system rebalances to maintain optimal returns.
+**Example:** If Compound offers 5% and Dolomite offers 6%, more funds go to Dolomite. When rates change across both platforms, the system rebalances automatically to maintain optimal returns.
 
 ### Lower Risk
 

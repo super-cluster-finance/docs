@@ -28,10 +28,10 @@ These tokens are your proof of ownership—like a digital savings receipt that h
 - They're always redeemable for your USDC plus accumulated returns
 
 **Your funds start earning behind the scenes**
-Instead of sitting idle, your USDC is distributed across trusted lending platforms (like Morpho and Aave) where borrowers pay interest. Think of it like a bank lending your deposit to reliable borrowers, except SuperCluster uses multiple platforms for better returns and safety.
+Instead of sitting idle, your USDC is distributed across trusted lending platforms (like Compound and Dolomite) where borrowers pay interest. Think of it like a bank lending your deposit to reliable borrowers, except SuperCluster uses multiple platforms for better returns and safety.
 
 ```
-Your USDC → SuperCluster → Split across Morpho & Aave → Borrowers pay interest → Yield returns to you
+Your USDC → SuperCluster → Split across Compound & Dolomite → Borrowers pay interest → Yield returns to you
 ```
 
 ## Why This Works Better

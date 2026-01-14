@@ -6,9 +6,13 @@ pagination_next: introduction/problem
 
 ## What is SuperCluster?
 
-SuperCluster is a DeFi Liquid Saving Protocol that brings liquid staking mechanics to stablecoin-based savings. Built on Mantle Network, SuperCluster enables users to deposit USDC and earn yield from established lending protocols while maintaining liquidity through composable receipt tokens.
+SuperCluster is a **DeFi Liquid Saving Protocol** that brings liquid staking mechanics to stablecoin-based savings. Built on **Lisk Network**, SuperCluster enables users to deposit USDC and earn yield from established lending protocols while maintaining liquidity through composable receipt tokens.
 
-Instead of staking volatile assets, SuperCluster focuses exclusively on stablecoins, allowing users to generate yield without exposure to market price fluctuations.
+**Think of it as "Lido for stablecoins"** — but instead of staking volatile assets like ETH, SuperCluster focuses exclusively on stablecoins, allowing users to generate yield without exposure to market price fluctuations.
+
+## Mission Statement
+
+> _"Transform stablecoins into productive, liquid assets that generate sustainable yield without market timing risk or loss of ownership rights."_
 
 ---
 
@@ -24,8 +28,6 @@ SuperCluster converts idle stablecoins into productive, liquid assets through a 
 
 In exchange for their deposits, users receive liquid receipt tokens **sUSDC** and **wsUSDC** that represent their principal plus accrued yield. These tokens remain fully transferable and composable across the DeFi ecosystem while continuing to earn yield. As a result, users do not need to choose between earning yield and maintaining liquidity.
 
----
-
 ## Key Principles
 
 ### 1. Principal Stability
@@ -39,9 +41,6 @@ Yield is sourced from established, battle-tested lending protocols and generated
 ### 3. Full Liquidity
 
 Deposits are represented by liquid receipt tokens that can be transferred, traded, or used across DeFi at any time. There are no lock-up periods, and liquidity is accessible through token transfers or secondary markets.
-
-
----
 
 ## How It Works
 
@@ -67,31 +66,26 @@ SuperCluster follows a simple, transparent flow that converts stablecoin deposit
 
 ### Key Characteristics
 
-- Yield accrues automatically at the protocol level  
-- No lock-up periods or withdrawal queues  
-- Value growth comes from real lending yield  
-- No token emissions or speculative incentives  
+- Yield accrues automatically at the protocol level
+- No lock-up periods or withdrawal queues
+- Value growth comes from real lending yield
+- No token emissions or speculative incentives
 
 Ownership is represented entirely by transferable tokens, not vault shares.
 
-
----
-
 ## Design Comparison
 
-| Conventional Model         | SuperCluster Model          |
-|---------------------------|-----------------------------|
-| Funds locked in vaults    | Tokenized deposits          |
-| Liquidity or yield        | Liquidity and yield         |
-| Single protocol exposure  | Strategy-based allocation   |
-| Manual repositioning      | Automated yield accrual     |
-| Market timing sensitivity | Market-neutral savings      |
-
----
+| Conventional Model        | SuperCluster Model        |
+| ------------------------- | ------------------------- |
+| Funds locked in vaults    | Tokenized deposits        |
+| Liquidity or yield        | Liquidity and yield       |
+| Single protocol exposure  | Strategy-based allocation |
+| Manual repositioning      | Automated yield accrual   |
+| Market timing sensitivity | Market-neutral savings    |
 
 ## Project Background
 
-SuperCluster is developed as part of the Mantle Network Hackathon, with the goal of becoming production-grade infrastructure for stablecoin savings.
+SuperCluster is developed as part of the Lisk Network Hackathon, with the goal of becoming production-grade infrastructure for stablecoin savings.
 
 The protocol is designed with the following principles in mind:
 
@@ -99,8 +93,6 @@ The protocol is designed with the following principles in mind:
 - Security-first development practices
 - Clear separation between core protocol and strategy logic
 - Long-term sustainability through transparent fee mechanisms
-
----
 
 ## Use Cases
 
@@ -119,52 +111,59 @@ The protocol is designed with the following principles in mind:
 - Build applications on top of liquid saving primitives
 - Compose strategies using standardized receipt tokens
 
----
-
 ## Network and Assets
 
-- **Network:** Mantle Network  
-- **Primary Asset:** USDC  
+- **Network:** Lisk Network
+- **Primary Asset:** USDC
+- **Integrated Protocols:** Compound, Dolomite
 
 **Receipt Tokens:**
-- **sUSDC:** Rebasing, yield-bearing token  
-- **wsUSDC:** Wrapped, non-rebasing token  
+
+- **sUSDC:** Rebasing, yield-bearing token
+- **wsUSDC:** Wrapped, non-rebasing token
+
+## Why Lisk Network?
+
+Lisk Network provides optimal infrastructure for SuperCluster's liquid saving protocol:
+
+- **Low Transaction Costs** — Enables frequent rebalancing and daily rebasing without high fees
+- **High Throughput** — Supports large-scale capital operations efficiently
+- **Growing DeFi Ecosystem** — Access to expanding lending protocols on Lisk
+- **Ethereum-Grade Security** — Built on OP Stack for robust security guarantees
+- **Perfect for Capital-Intensive DeFi** — Infrastructure designed specifically for financial applications
 
 ---
 
 ## Current Status
 
-SuperCluster is currently in MVP development as part of the Mantle Network Hackathon. Prior to mainnet deployment, the protocol will undergo iterative testing, security reviews, and audit processes.
+SuperCluster is currently in MVP development as part of the Lisk Network Hackathon. Prior to mainnet deployment, the protocol will undergo iterative testing, security reviews, and audit processes.
 
 **Planned Phases:**
 
 Hackathon MVP → Alpha Testing → Beta (Audited) → Production Launch
 
----
-
 ## Further Reading
 
-- **Problem** — Motivation and market gaps  
-- **Solution** — Protocol design and approach  
-- **Who Is This For** — Target users and integrations  
-
----
+- **Problem** — Motivation and market gaps
+- **Solution** — Protocol design and approach
+- **Who Is This For** — Target users and integrations
 
 ## Summary
 
-| Item               | Description                    |
-|--------------------|--------------------------------|
-| Protocol Type      | Liquid Saving Protocol         |
-| Primary Asset      | USDC                           |
-| Network            | Mantle Network                 |
-| Yield Sources      | Aave, Morpho
-| Token Model        | sToken / wsToken               |
-| Development Status | MVP                            |
+| Item               | Description                                  |
+| ------------------ | -------------------------------------------- |
+| Protocol Type      | Liquid Saving Protocol                       |
+| Primary Asset      | USDC                                         |
+| Network            | Lisk Network                                 |
+| Yield Sources      | Compound, Dolomite                           |
+| Token Model        | sToken / wsToken                             |
+| Development Status | Hackathon MVP                                |
+| Tech Stack         | Solidity, TypeScript, Foundry, NextJS, Privy |
 
-*Yield sources may evolve during MVP and early deployments.*
+_This is the hackathon scope for Lisk Network. Additional yield sources and features will be added in production._
 
 ---
 
 ## Vision
 
-SuperCluster aims to provide standardized, liquid, and composable infrastructure for stablecoin savings in DeFi—enabling users and protocols to generate yield without sacrificing liquidity or taking on market price risk.
+SuperCluster aims to provide standardized, liquid, and composable infrastructure for stablecoin savings in DeFi enabling users and protocols to generate yield without sacrificing liquidity or taking on market price risk.

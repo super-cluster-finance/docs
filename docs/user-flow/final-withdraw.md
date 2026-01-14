@@ -10,7 +10,7 @@ Complete guide to claiming your USDC after withdrawal request is ready.
 - Status: Ready to Claim
 - Have request ID
 - Wallet connected
-- Have MNT for gas
+- Have ETH for gas
   ![Alt text](/img/request-withdrawals.png)
 
 ### Steps

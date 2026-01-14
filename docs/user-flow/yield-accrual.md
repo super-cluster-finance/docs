@@ -27,15 +27,15 @@ Deposited USDC generates yield from multiple lending protocols:
 flowchart TD
    A["Deposit (10,000 USDC)"]
    B["Pilot Strategy Allocation"]
-   C["Aave (60%)"]
-   D["Morpho (40%)"]
-   E["Blended APY: +5.4%"]
+   C["Compound (50%)"]
+   D["Dolomite (50%)"]
+   F["Blended APY: +5.3%"]
 
    A --> B
    B --> C
    B --> D
-   C --> E
-   D --> E
+   C --> F
+   D --> F
 ```
 
 ### Yield Calculation
@@ -45,9 +45,9 @@ flowchart TD
 ```
 Blended APY = Σ (Allocation % × Protocol APY)
 
-(60% × 5%) + (40% × 6%)
-= 3.0% + 2.4%
-= +5.4% APY
+(50% × 6%) + (50% × 5.6%)
+= 3.0% + 2.8%
+= +5.8% APY
 ```
 
 ## Rebase Mechanism Explained
@@ -71,40 +71,40 @@ Your Holdings:
 
 ```
 Adapters harvest yield from protocols:
-- Aave:     +3,240 USDC (60%)
-- Morpho:   +2,160 USDC (40%)
+- Compound: +3,000 USDC (50%)
+- Dolomite: +2,800 USDC (50%)
 -----------------------
-Total Yield: +5,400 USDC
+Total Yield: +5,800 USDC
 ```
 
 **Step 2: Exchange Rate Update**
 
 ```
-New Total Assets = 1,000,000 + 5,400 = 1,005,400 USDC
+New Total Assets = 1,000,000 + 5,800 = 1,005,800 USDC
 Total Supply = 1,000,000 sUSDC (unchanged)
 
-New Exchange Rate = 1,005,400 / 1,000,000 = 1.0054
+New Exchange Rate = 1,005,800 / 1,000,000 = 1.0058
 ```
 
 **Step 3: Balance Update**
 
 ```
 Your new balance = Shares × New Exchange Rate
-                 = 10,000 × 1.0054
-                 = 10,054 sUSDC
+                 = 10,000 × 1.0058
+                 = 10,058 sUSDC
 ```
 
 ### After Rebase
 
 ```
 Protocol State:
-- Total Assets: 1,005,400 USDC
+- Total Assets: 1,005,800 USDC
 - Total sUSDC Supply: 1,000,000 sUSDC (supply number unchanged)
-- Exchange Rate: 1.0054
+- Exchange Rate: 1.0058
 
 Your Holdings:
-- sUSDC Balance: 10,054 sUSDC (+54 sUSDC)
-- Value: 10,054 USDC (+54 USDC yield)
+- sUSDC Balance: 10,058 sUSDC (+58 sUSDC)
+- Value: 10,058 USDC (+58 USDC yield)
 ```
 
 **Process:**
@@ -260,23 +260,23 @@ The Pilot Strategy optimizes yield by rebalancing allocations:
 
 Protocol APY:
 
-- Aave: 5.0% (60% allocation)
-- Morpho: 6.0% (40% allocation)
+- Compound: 6.0% (50% allocation)
+- Dolomite: 5.6% (50% allocation)
 
-Blended APY: 5.4%
+Blended APY: 5.8%
 
 ```
 
-**After Rebalance (Morpho APY increased):**
+**After Rebalance (Compound APY increased):**
 
 ```
 
 New Allocation:
 
-- Aave: 5.0% (45% allocation)
-- Morpho: 7.0% (55% allocation) ← APY Increased!
+- Compound: 6.5% (55% allocation) ← APY Increased!
+- Dolomite: 5.6% (45% allocation)
 
-New Blended APY: 6.1%
+New Blended APY: 6.07%
 
 ```
 

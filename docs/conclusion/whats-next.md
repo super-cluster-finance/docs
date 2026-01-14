@@ -6,8 +6,6 @@ sidebar_position: 2
 
 This section outlines the near-term roadmap and forward-looking milestones for SuperCluster. The focus is on progressing from an MVP hackathon prototype into reliable, production-grade DeFi infrastructure.
 
----
-
 ## Short-Term Roadmap (Post-Hackathon)
 
 ### 1. MVP Hardening
@@ -22,8 +20,6 @@ The immediate priority after the hackathon is stabilizing the core protocol.
 
 Goal: ensure correctness, clarity, and predictable behavior under normal conditions.
 
----
-
 ### 2. Strategy Validation
 
 Before expanding yield sources, existing strategies must be validated in real conditions.
@@ -34,8 +30,6 @@ Before expanding yield sources, existing strategies must be validated in real co
 - Validate adapter isolation and failure handling
 
 Goal: prove that the yield abstraction model works reliably.
-
----
 
 ### 3. Security Review & Audits
 
@@ -50,8 +44,6 @@ Security is a gating factor for growth.
 
 Goal: reduce systemic risk before scaling capital.
 
----
-
 ## Mid-Term Roadmap
 
 ### 4. Strategy Expansion
@@ -65,8 +57,6 @@ Once the initial system is stable, SuperCluster will expand yield sources.
 
 Goal: improve yield resilience through diversification, not leverage.
 
----
-
 ### 5. DeFi Integrations
 
 SuperCluster’s value increases with composability.
@@ -78,8 +68,6 @@ SuperCluster’s value increases with composability.
 
 Goal: make SuperCluster assets first-class DeFi building blocks.
 
----
-
 ### 6. UX & Developer Experience Improvements
 
 Accessibility and clarity are essential for adoption.
@@ -90,8 +78,6 @@ Accessibility and clarity are essential for adoption.
 - Developer-friendly interfaces for integration
 
 Goal: reduce friction for both users and builders.
-
----
 
 ## Long-Term Direction
 
@@ -106,8 +92,6 @@ Governance evolves alongside protocol maturity.
 
 Goal: align protocol control with its user base over time.
 
----
-
 ### 8. Multi-Chain Deployment
 
 SuperCluster is designed to be chain-agnostic.
@@ -117,8 +101,6 @@ SuperCluster is designed to be chain-agnostic.
 - Maintain consistent behavior across chains
 
 Goal: serve users wherever stablecoin liquidity exists.
-
----
 
 ### 9. Becoming a DeFi Primitive
 
@@ -130,8 +112,6 @@ The long-term ambition is infrastructure, not an application.
 
 Goal: make “productive stablecoins” the default assumption in DeFi.
 
----
-
 ## Guiding Principle Going Forward
 
 SuperCluster will prioritize:
@@ -141,12 +121,10 @@ SuperCluster will prioritize:
 - Composability over closed optimization
 - Long-term trust over short-term growth
 
----
-
 ## Summary
 
 SuperCluster’s roadmap is intentionally incremental.
 
 Each phase builds confidence, security, and composability before scaling capital. By advancing methodically, the protocol aims to evolve from a hackathon MVP into durable, ecosystem-level infrastructure for stablecoin savings.
 
-What’s next is not just more features — it’s stronger foundations.
+What’s next is not just more features it’s stronger foundations.

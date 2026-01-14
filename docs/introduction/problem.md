@@ -4,9 +4,18 @@
 
 Liquid staking has significantly improved capital efficiency in DeFi. Protocols such as Lido introduced liquid receipt tokens that allow users to earn yield while retaining liquidity. This model successfully addresses the traditional trade-off between yield and asset lock-up.
 
-However, liquid staking introduces a fundamental limitation: exposure to asset price volatility.
+However, liquid staking introduces a fundamental limitation: **exposure to asset price volatility**.
 
 Yield generation remains tightly coupled to the market performance of the underlying asset, creating significant downside risk during unfavorable market conditions.
+
+## The Scale of the Problem
+
+Over **$150 billion in stablecoins** exist on-chain today, yet a significant portion remains either:
+- Locked in non-composable vaults
+- Idle in wallets generating no yield
+- Trapped in protocol-specific positions with limited liquidity
+
+This represents massive capital inefficiency in the DeFi ecosystem.
 
 ## Market Volatility as Structural Risk
 
@@ -51,44 +60,55 @@ Stablecoins remove price volatility but introduce a different set of constraints
 
 #### Idle Stablecoins
 
-- Stable principal
-- No yield
-- Purchasing power erosion over time
+- Stable principal (Yes)
+- No yield (No)
+- Purchasing power erosion over time (No)
+- Full liquidity (Yes)
 
 #### Direct Lending Protocols
 
-- Stable principal
-- Yield generation
-- Limited liquidity of deposit positions
-- Single protocol exposure
+- Stable principal (Yes)
+- Yield generation (Yes)
+- Limited liquidity of deposit positions (No)
+- Single protocol exposure (concentrated risk) (Warning)
 
-#### Yield Aggregators
+#### Yield Aggregators (Vaults)
 
-- Automated strategy allocation
-- Stable principal
-- Vault-based positions with limited composability
-- Funds effectively locked at the strategy level
+- Automated strategy allocation (Yes)
+- Stable principal (Yes)
+- Vault-based positions with limited composability (No)
+- Funds effectively locked at the strategy level (No)
+- No transferable receipt tokens (No)
 
-Despite different implementations, the trade-off remains consistent.
+### The Fundamental Trade-Off
 
-Yield, liquidity, and composability cannot be achieved simultaneously.
+Despite different implementations, the trade-off remains consistent:
+
+**You must choose between yield, liquidity, and composability — but cannot have all three simultaneously.**
+
+This creates a critical gap in DeFi infrastructure.
 
 ## The Composability Gap
 
 Most yield-generating stablecoin solutions lock deposits inside vaults or protocol-specific positions. These positions are difficult to reuse across the broader DeFi ecosystem.
 
-### User and Protocol Requirements
+**The Problem:** Yield-bearing positions are **non-standard** and **protocol-specific**, preventing composability and limiting capital efficiency.
 
-- Stable principal
-- Passive yield generation
-- Immediate liquidity
-- Interoperability across DeFi protocols
+### What Users and Protocols Actually Need
 
-### Current State
+1. **Stable principal** — No exposure to volatile asset prices
+2. **Passive yield generation** — Automatic returns without active management
+3. **Immediate liquidity** — Access funds anytime without lock-ups
+4. **Interoperability across DeFi** — Use yield-bearing tokens as collateral, in liquidity pools, etc.
 
-- At best, solutions provide two of the four
-- Composability is often sacrificed for yield
-- Liquidity is constrained by withdrawal mechanics
+### Current State of DeFi Savings
+
+- At best, existing solutions provide **two out of four** requirements
+- Composability is sacrificed for yield optimization
+- Liquidity is constrained by withdrawal queues or vault mechanics
+- Receipt tokens (if they exist) are not widely accepted across protocols
+
+**No existing solution delivers all four requirements simultaneously.**
 
 ## Market Timing Dependency
 
@@ -145,12 +165,17 @@ Yield-bearing positions are not standardized or transferable across DeFi.
 
 ## Market Opportunity
 
-- Stablecoins represent over $150B in on-chain value
-- A large portion remains idle or underutilized
-- Protocols increasingly require yield-bearing, liquid collateral
-- Demand exists for conservative, market-neutral yield products
+The numbers tell a clear story:
 
-Despite this, there is no widely adopted primitive for liquid, composable, yield-bearing stablecoins with preserved principal.
+- **$150B+ in stablecoins** exist on-chain today
+- A **significant portion remains idle** in wallets or locked in non-composable positions
+- Protocols increasingly require **yield-bearing, liquid collateral**
+- Strong demand exists for **conservative, market-neutral yield products**
+- Institutional and DAO treasuries seek **productive capital with full liquidity**
+
+Despite this massive opportunity, **there is no widely adopted primitive for liquid, composable, yield-bearing stablecoins with preserved principal.**
+
+This gap represents one of the largest unmet needs in DeFi infrastructure.
 
 ## What the Market Requires
 

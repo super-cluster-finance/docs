@@ -136,7 +136,6 @@ interface IsUSDC {
 
 Some DeFi protocols don't support rebasing tokens:
 
-- Lending protocols (Aave, Compound)
 - Some AMMs
 - Certain yield aggregators
 

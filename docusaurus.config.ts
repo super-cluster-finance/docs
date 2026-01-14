@@ -6,7 +6,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "Supercluster",
-  tagline: "Dinosaurs are cool",
+  tagline: "Liquid Stablecoin Savings Protocol",
   favicon: "img/favicon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -96,7 +96,7 @@ const config: Config = {
           position: "right",
         },
         {
-          href: "https://github.com/supercluster/supercluster",
+          href: "https://github.com/super-cluster-lisk",
           label: "GitHub",
           position: "right",
         },
@@ -132,7 +132,7 @@ const config: Config = {
           items: [
             {
               label: "GitHub",
-              href: "https://github.com/super-cluster-finance",
+              href: "https://github.com/super-cluster-lisk",
             },
           ],
         },

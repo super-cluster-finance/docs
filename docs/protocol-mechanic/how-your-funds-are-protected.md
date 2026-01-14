@@ -26,7 +26,7 @@ This transparency helps you understand current protections versus planned improv
 
 **Why it matters:** If one platform fails, others continue working normally.
 
-**Example:** Your $10,000 is split 60/40 between Morpho and Aave. If Morpho has issues affecting $6,000, your $4,000 in Aave remains safe. Maximum loss is 60%, not everything.
+**Example:** Your $10,000 is split across Compound and Dolomite. If Compound has issues affecting $5,000, your funds in Dolomite remain safe. Maximum loss is 50%, not everything.
 
 **Status:** Active now ✓
 
@@ -36,7 +36,7 @@ This transparency helps you understand current protections versus planned improv
 
 **Planned rules:**
 
-- Maximum 40% in any single platform
+- Maximum 50% in any single platform (Compound or Dolomite)
 - Minimum 2 different platforms used
 - No over-concentration in one source
 
@@ -54,7 +54,7 @@ This transparency helps you understand current protections versus planned improv
 
 ### 4. Automatic Monitoring
 
-**What it means:** System watches for unusual activity like sudden rate changes, mass withdrawals from platforms, or unexpected balance drops.
+**What it means:** System watches for unusual activity like sudden rate changes, mass withdrawals from platforms, or unexpected balance drops across Compound and Dolomite.
 
 **Why it matters:** Problems are caught early and addressed before becoming serious.
 
@@ -62,8 +62,8 @@ This transparency helps you understand current protections versus planned improv
 
 ## The Risks You Should Know
 
-**Platform Failure** — A lending platform could be exploited or fail  
-**Smart Contract Bugs** — SuperCluster's code could have vulnerabilities  
+**Platform Failure** — A lending platform (Compound or Dolomite) could be exploited or fail  
+**Smart Contract Bugs** — SuperCluster's or partner protocols' code could have vulnerabilities  
 **Liquidity Constraints** — High withdrawal demand might cause delays  
 **Yield Volatility** — Returns can drop if borrowing demand falls
 
@@ -80,17 +80,17 @@ When a platform experiences losses, they're shared proportionally among all user
 **Example scenario:**
 
 - Total deposits: $1,000,000
-- Platform A allocation: $400,000 (40%)
-- Platform A loses 25% due to exploit
-- Total loss: $100,000 (10% of all deposits)
+- Compound allocation: $333,333 (33%)
+- Compound loses 25% due to exploit
+- Total loss: $83,333 (8.3% of all deposits)
 
 **How it's distributed:**
 
 | Your Deposit | Your Share | Your Loss | You Keep |
 | ------------ | ---------- | --------- | -------- |
-| $100,000     | 10%        | $10,000   | $90,000  |
-| $50,000      | 5%         | $5,000    | $45,000  |
-| $10,000      | 1%         | $1,000    | $9,000   |
+| $100,000     | 10%        | $8,300    | $91,700  |
+| $50,000      | 5%         | $4,150    | $45,850  |
+| $10,000      | 1%         | $830      | $9,170   |
 
 **Key points:**
 
@@ -106,9 +106,9 @@ An insurance fund will cover losses before affecting users. It's built from prot
 
 **How it helps:**
 
-- Total loss: $100,000
-- Insurance covers: $60,000
-- Users share: $40,000 (60% reduction in user impact)
+- Total loss: $83,333
+- Insurance covers: $50,000
+- Users share: $33,333 (60% reduction in user impact)
 
 **Target:** 1-5% of total deposits over time
 
@@ -135,17 +135,17 @@ All communication happens through official channels with complete transparency a
 ## Security Roadmap
 
 **Current Phase:** Basic protections active, manual monitoring, internal security review  
-**Production Launch:** Professional audits, automated alerts, 24/7 monitoring  
+**Production Launch:** Professional audits of Compound and Dolomite integrations, automated alerts, 24/7 monitoring  
 **Post-Launch:** Insurance fund, bug bounty program, continuous improvements
 
 ## Honest Assessment
 
 **What we do well:**
 
-- Multiple protection layers
+- Multiple protection layers across three major protocols
 - Transparent about risks
 - Fair loss handling
-- Active monitoring
+- Active monitoring of Compound and Dolomite
 
 **What we cannot guarantee:**
 
@@ -154,12 +154,12 @@ All communication happens through official channels with complete transparency a
 - Constant yields
 - Perfect protection from all scenarios
 
-**The reality:** SuperCluster significantly reduces risk compared to managing funds yourself across multiple platforms, but DeFi always carries some risk. We minimize it through diversification and active management—we don't pretend it doesn't exist.
+**The reality:** SuperCluster significantly reduces risk compared to managing funds yourself across multiple platforms, but DeFi always carries some risk. We minimize it through diversification across Compound and Dolomite, plus active management—we don't pretend it doesn't exist.
 
 ## Common Questions
 
 **Can I lose all my money?**  
-Technically yes, but highly unlikely. Multiple platforms would need to fail completely and simultaneously. Diversification makes this scenario extremely rare.
+Technically yes, but highly unlikely. Compound and Dolomite would both need to fail completely and simultaneously. Diversification makes this scenario extremely rare.
 
 **What's the most realistic risk?**  
 A single platform experiencing issues causing 5-10% loss, shared proportionally among all users.
@@ -179,7 +179,7 @@ No. The protocol design prevents team withdrawals—operations are controlled by
 ## Summary
 
 **Protections in place:**
-Platform isolation • Diversification • Reserve liquidity • Active monitoring • Fair loss handling
+Platform isolation (Compound, Dolomite) • Diversification • Reserve liquidity • Active monitoring • Fair loss handling
 
 **Our commitment:**
 Honest risk communication • Transparent operations • Fair treatment • Continuous security improvements
@@ -187,10 +187,10 @@ Honest risk communication • Transparent operations • Fair treatment • Cont
 **What you should know:**
 DeFi has risks that can't be fully eliminated • SuperCluster reduces risk through design • Only deposit what you can afford to lose • Stay informed about your positions
 
-SuperCluster's approach: minimize risk through diversification and active management, handle problems fairly and transparently, continuously improve security.
+SuperCluster's approach: minimize risk through diversification across three protocols and active management, handle problems fairly and transparently, continuously improve security.
 
 ## Learn More
 
-- **Fund Management Strategy** — How allocation decisions protect your funds
-- **Multiple Yield Sources** — Platform diversification explained
+- **Fund Management Strategy** — How allocation decisions protect your funds across Compound and Dolomite
+- **Multiple Yield Sources** — Protocol diversification explained
 - **How SuperCluster Works** — Complete system overview
