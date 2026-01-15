@@ -96,7 +96,7 @@ const config: Config = {
           position: "right",
         },
         {
-          href: "https://github.com/super-cluster-lisk",
+          href: "https://github.com/super-cluster-finance",
           label: "GitHub",
           position: "right",
         },
@@ -132,7 +132,7 @@ const config: Config = {
           items: [
             {
               label: "GitHub",
-              href: "https://github.com/super-cluster-lisk",
+              href: "https://github.com/super-cluster-finance",
             },
           ],
         },

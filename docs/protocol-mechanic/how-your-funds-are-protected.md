@@ -26,7 +26,7 @@ This transparency helps you understand current protections versus planned improv
 
 **Why it matters:** If one platform fails, others continue working normally.
 
-**Example:** Your $10,000 is split across Compound and Dolomite. If Compound has issues affecting $5,000, your funds in Dolomite remain safe. Maximum loss is 50%, not everything.
+**Example:** Your $10,000 is split $4,000 / $3,000 / $3,000 across Compound, Init, and Dolomite. If Compound has issues affecting $4,000, your funds in Init and Dolomite remain safe. Maximum loss is 40%, not everything.
 
 **Status:** Active now ✓
 
@@ -36,8 +36,9 @@ This transparency helps you understand current protections versus planned improv
 
 **Planned rules:**
 
-- Maximum 50% in any single platform (Compound or Dolomite)
-- Minimum 2 different platforms used
+- Target allocation: Compound 40%, Init 30%, Dolomite 30%
+- Maximum 40% in any single platform
+- Minimum 3 platforms active to keep diversification
 - No over-concentration in one source
 
 **Why it matters:** No single platform failure can wipe out your entire deposit.
@@ -54,7 +55,7 @@ This transparency helps you understand current protections versus planned improv
 
 ### 4. Automatic Monitoring
 
-**What it means:** System watches for unusual activity like sudden rate changes, mass withdrawals from platforms, or unexpected balance drops across Compound and Dolomite.
+**What it means:** System watches for unusual activity like sudden rate changes, mass withdrawals from platforms, or unexpected balance drops across Compound, Init, and Dolomite.
 
 **Why it matters:** Problems are caught early and addressed before becoming serious.
 
@@ -62,7 +63,7 @@ This transparency helps you understand current protections versus planned improv
 
 ## The Risks You Should Know
 
-**Platform Failure** — A lending platform (Compound or Dolomite) could be exploited or fail  
+**Platform Failure** — A lending platform (Compound, Init, or Dolomite) could be exploited or fail  
 **Smart Contract Bugs** — SuperCluster's or partner protocols' code could have vulnerabilities  
 **Liquidity Constraints** — High withdrawal demand might cause delays  
 **Yield Volatility** — Returns can drop if borrowing demand falls
@@ -80,17 +81,17 @@ When a platform experiences losses, they're shared proportionally among all user
 **Example scenario:**
 
 - Total deposits: $1,000,000
-- Compound allocation: $333,333 (33%)
+- Compound allocation: $400,000 (40%)
 - Compound loses 25% due to exploit
-- Total loss: $83,333 (8.3% of all deposits)
+- Total loss: $100,000 (10% of all deposits)
 
 **How it's distributed:**
 
 | Your Deposit | Your Share | Your Loss | You Keep |
 | ------------ | ---------- | --------- | -------- |
-| $100,000     | 10%        | $8,300    | $91,700  |
-| $50,000      | 5%         | $4,150    | $45,850  |
-| $10,000      | 1%         | $830      | $9,170   |
+| $100,000     | 10%        | $10,000   | $90,000  |
+| $50,000      | 5%         | $5,000    | $45,000  |
+| $10,000      | 1%         | $1,000    | $9,000   |
 
 **Key points:**
 
@@ -135,7 +136,7 @@ All communication happens through official channels with complete transparency a
 ## Security Roadmap
 
 **Current Phase:** Basic protections active, manual monitoring, internal security review  
-**Production Launch:** Professional audits of Compound and Dolomite integrations, automated alerts, 24/7 monitoring  
+**Production Launch:** Professional audits of Compound, Init, and Dolomite integrations, automated alerts, 24/7 monitoring  
 **Post-Launch:** Insurance fund, bug bounty program, continuous improvements
 
 ## Honest Assessment
@@ -145,7 +146,7 @@ All communication happens through official channels with complete transparency a
 - Multiple protection layers across three major protocols
 - Transparent about risks
 - Fair loss handling
-- Active monitoring of Compound and Dolomite
+- Active monitoring of Compound, Init, and Dolomite
 
 **What we cannot guarantee:**
 
@@ -154,12 +155,12 @@ All communication happens through official channels with complete transparency a
 - Constant yields
 - Perfect protection from all scenarios
 
-**The reality:** SuperCluster significantly reduces risk compared to managing funds yourself across multiple platforms, but DeFi always carries some risk. We minimize it through diversification across Compound and Dolomite, plus active management—we don't pretend it doesn't exist.
+**The reality:** SuperCluster significantly reduces risk compared to managing funds yourself across multiple platforms, but DeFi always carries some risk. We minimize it through diversification across Compound, Init, and Dolomite, plus active management—we don't pretend it doesn't exist.
 
 ## Common Questions
 
 **Can I lose all my money?**  
-Technically yes, but highly unlikely. Compound and Dolomite would both need to fail completely and simultaneously. Diversification makes this scenario extremely rare.
+Technically yes, but highly unlikely. Compound, Init, and Dolomite would all need to fail completely and simultaneously. Diversification makes this scenario extremely rare.
 
 **What's the most realistic risk?**  
 A single platform experiencing issues causing 5-10% loss, shared proportionally among all users.
@@ -179,7 +180,7 @@ No. The protocol design prevents team withdrawals—operations are controlled by
 ## Summary
 
 **Protections in place:**
-Platform isolation (Compound, Dolomite) • Diversification • Reserve liquidity • Active monitoring • Fair loss handling
+Platform isolation (Compound, Init, Dolomite) • Diversification • Reserve liquidity • Active monitoring • Fair loss handling
 
 **Our commitment:**
 Honest risk communication • Transparent operations • Fair treatment • Continuous security improvements
@@ -191,6 +192,6 @@ SuperCluster's approach: minimize risk through diversification across three prot
 
 ## Learn More
 
-- **Fund Management Strategy** — How allocation decisions protect your funds across Compound and Dolomite
+- **Fund Management Strategy** — How allocation decisions protect your funds across Compound, Init, and Dolomite
 - **Multiple Yield Sources** — Protocol diversification explained
 - **How SuperCluster Works** — Complete system overview

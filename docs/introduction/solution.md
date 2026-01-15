@@ -41,14 +41,17 @@ As a result, users earn yield without needing to manage market cycles or price m
 - Optimize allocation based on risk-adjusted returns
 - Avoid reliance on short-term token emissions
 
-**Integrated Yield Sources (Lisk Hackathon Scope):**
+**Integrated Yield Sources (Mantle Hackathon Scope):**
 
 | Protocol | Category            | Risk Profile | Purpose                  |
 | -------- | ------------------- | ------------ | ------------------------ |
 | Compound | Optimized lending   | Low–Medium   | Primary yield generation |
+| Init     | Institutional-grade | Low          | Liquidity-first exposure |
 | Dolomite | Established lending | Low          | Diversified exposure     |
 
 Allocation decisions are handled by the **Pilot Strategy**, which balances yield, liquidity, and risk across these protocols.
+
+**Default allocation target:** Compound 40%, Init 30%, Dolomite 30% (rebalanced as conditions change).
 
 _Additional protocols may be integrated in production deployments._
 
@@ -105,15 +108,15 @@ User ownership is represented entirely through tokens, not vault shares.
 │  • Dynamic rebalancing                      │
 └──────────────────┬──────────────────────────┘
                    │
-        ┌──────────┴──────────┐
-        │                     │
-┌───────▼────────┐   ┌────────▼────────┐
-│Compound Adapter│   │ Dolomite Adapter│
-└───────┬────────┘   └────────┬────────┘
-        │                     │
-┌───────▼────────┐   ┌────────▼────────┐
-│Compound Protocol│  │Dolomite Protocol│
-└────────────────┘   └─────────────────┘
+        ┌──────────┬──────────┬──────────┐
+        │          │          │
+┌───────▼────────┐ ┌▼────────┐ ┌────────▼────────┐
+│Compound Adapter│ │Init Adapter│ │ Dolomite Adapter│
+└───────┬────────┘ └┬────────┘ └────────┬────────┘
+        │          │          │
+┌───────▼────────┐ ┌▼────────┐ ┌────────▼────────┐
+│Compound Protocol│ │Init Protocol│ │Dolomite Protocol│
+└────────────────┘ └─────────┘ └─────────────────┘
 ```
 
 **Key Benefits:**
@@ -164,7 +167,7 @@ The Pilot Strategy functions as an intelligent portfolio manager that automatica
 
 **Core Functions:**
 
-- Allocates capital across Compound and Dolomite
+- Allocates capital across Compound, Init, and Dolomite (baseline 40/30/30)
 - Balances yield, liquidity, and risk in real-time
 - Dynamic rebalancing based on market conditions
 - Designed for future governance or user-selectable strategies
@@ -266,19 +269,19 @@ The Pilot Strategy continuously monitors these factors and rebalances when optim
 
 Fee distribution is designed to support protocol sustainability, risk reserves, and strategy operations.
 
-## Why Lisk Network?
+## Why Mantle Network?
 
-SuperCluster is built on **Lisk Network** for the following strategic reasons:
+SuperCluster is built on **Mantle Network** for the following strategic reasons:
 
 ### Optimal Infrastructure for Liquid Savings
 
-| Feature                     | Why It Matters for SuperCluster                                 |
-| --------------------------- | --------------------------------------------------------------- |
-| **Low Transaction Costs**   | Enables frequent rebalancing & daily rebasing without high fees |
-| **High Throughput**         | Supports large-scale capital operations efficiently             |
-| **Ethereum-Grade Security** | Built on OP Stack for robust security guarantees                |
-| **Growing DeFi Ecosystem**  | Access to expanding lending protocols (Compound, Dolomite)      |
-| **Capital-Intensive Focus** | Infrastructure designed for financial applications              |
+| Feature                     | Why It Matters for SuperCluster                                  |
+| --------------------------- | ---------------------------------------------------------------- |
+| **Low Transaction Costs**   | Enables frequent rebalancing & daily rebasing without high fees  |
+| **High Throughput**         | Supports large-scale capital operations efficiently              |
+| **Ethereum-Grade Security** | Built on OP Stack for robust security guarantees                 |
+| **Growing DeFi Ecosystem**  | Access to expanding lending protocols (Compound, Init, Dolomite) |
+| **Capital-Intensive Focus** | Infrastructure designed for financial applications               |
 
 **Key Advantage:** Low costs make micro-optimizations and frequent yield distribution economically viable — critical for a liquid saving protocol.
 
@@ -290,12 +293,12 @@ SuperCluster is built on **Lisk Network** for the following strategic reasons:
 
 - Core contracts (Vault, sToken, wsToken)
 - Pilot Strategy with basic allocation logic
-- Compound and Dolomite adapters
+- Compound, Init, and Dolomite adapters
 - Event-based rebase mechanism
 - Frontend interface (NextJS + Privy)
 - Documentation and demo
 
-**Scope:** Lisk Network testnet deployment for hackathon submission
+**Scope:** Mantle Network testnet deployment for hackathon submission
 
 ### Phase 2: Alpha - Security & Testing
 
@@ -315,7 +318,7 @@ SuperCluster is built on **Lisk Network** for the following strategic reasons:
 
 ### Phase 4: Production Launch - Mainnet
 
-- Lisk Network mainnet deployment
+- Mantle Network mainnet deployment
 - DEX integration (sUSDC/USDC pools)
 - Performance fee implementation
 - Algorithm-driven Pilot Strategy
@@ -336,9 +339,9 @@ SuperCluster addresses the core limitations of existing DeFi yield solutions by 
 
 **Stable principal** — Stablecoin-only strategy eliminates market volatility  
 **Full liquidity** — Transferable, composable receipt tokens (sToken/wsToken)  
-**Sustainable yield** — Real returns from Compound and Dolomite lending activity  
+**Sustainable yield** — Real returns from Compound, Init, and Dolomite lending activity  
 **Native composability** — Use across DeFi without restrictions  
-**Built on Lisk** — Low-cost infrastructure for optimal capital efficiency
+**Built on Mantle** — Low-cost infrastructure for optimal capital efficiency
 
 **SuperCluster = "Lido for Stablecoins"**
 
@@ -346,8 +349,8 @@ SuperCluster is designed as **infrastructure, not a single strategy** — provid
 
 | Aspect        | Description                                  |
 | ------------- | -------------------------------------------- |
-| Network       | Lisk Network                                 |
-| Protocols     | Compound, Dolomite                           |
+| Network       | Mantle Network                               |
+| Protocols     | Compound, Init, Dolomite                     |
 | Token Model   | sToken (rebasing) / wsToken (non-rebasing)   |
 | Architecture  | Modular with Pilot Strategy + Yield Adapters |
 | Current Phase | Hackathon MVP                                |

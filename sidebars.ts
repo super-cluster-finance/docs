@@ -11,7 +11,7 @@ import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
  The sidebars can be generated from the filesystem, or explicitly defined here.
 
  Create as many sidebars as you want.
- */ 
+ */
 const sidebars: SidebarsConfig = {
   tutorialSidebar: [
     {
@@ -68,7 +68,6 @@ const sidebars: SidebarsConfig = {
         "user-flow/mint-s-usdc",
         "user-flow/yield-accrual",
         "user-flow/wrap-ws-usdc",
-        "user-flow/use-in-defi",
         "user-flow/two-step-withdrawal",
         "user-flow/final-withdraw",
       ],
@@ -118,7 +117,6 @@ const sidebars: SidebarsConfig = {
       ],
     },
     {
-     
       type: "category",
       label: "Conclusion",
       link: {

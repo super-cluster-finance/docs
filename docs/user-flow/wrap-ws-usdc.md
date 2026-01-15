@@ -220,7 +220,7 @@ Day 365: After 1 year (rate: 1.05)
 
 - Wrap larger amounts to optimize gas per token
 - Batch operations when possible
-- Consider gas prices on Lisk Network
+- Consider gas prices on Mantle Network
 
 ## Advantages of wsUSDC
 

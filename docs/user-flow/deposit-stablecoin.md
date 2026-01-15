@@ -21,7 +21,7 @@ When you deposit USDC into SuperCluster:
 ### Step 1: Connect Your Wallet
 
 - Connect your wallet to the SuperCluster dApp
-- Ensure you have USDC on Lisk Network
+- Ensure you have USDC on Mantle Network
 - Check you have sufficient ETH for gas fees
 
 ### Step 2: Approve USDC
@@ -62,14 +62,16 @@ flowchart TD
     B["SuperCluster Contract"]
     C["Mint sUSDC"]
     D["Pilot Strategy"]
-    E["Compound (50%)"]
-    F["Dolomite (50%)"]
+    E["Compound (40%)"]
+    F["Init (30%)"]
+    G["Dolomite (30%)"]
 
     A --> B
     B --> C
     B --> D
     D --> E
     D --> F
+    D --> G
 ```
 
 ## What You Get
@@ -108,8 +110,9 @@ After you deposit:
 
 The Pilot Strategy divides your deposit across 3 protocols:
 
-- **Compound (50%):** Optimized lending through Compound
-- **Dolomite (50%):** Decentralized lending platform with advanced risk management
+- **Compound (40%):** Optimized lending through Compound
+- **Init (30%):** Capital deployment to the Init lending venue
+- **Dolomite (30%):** Decentralized lending platform with advanced risk management
 
 ## Important Notes
 
@@ -122,7 +125,7 @@ The Pilot Strategy divides your deposit across 3 protocols:
 
 ### Things to Know
 
-- You need USDC on Lisk Network
+- You need USDC on Mantle Network
 - Gas fees required for transaction
 - Smart contract risk (see Risk Management)
 - APY may vary based on market conditions

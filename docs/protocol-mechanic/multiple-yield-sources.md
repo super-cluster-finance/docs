@@ -7,7 +7,7 @@ SuperCluster doesn't rely on just one lending platform—your funds are distribu
 Imagine choosing where to save money:
 
 **Option A:** Everything in one bank at 5% interest  
-**Option B:** Split across two banks offering 4.8% and 5.2%
+**Option B:** Split across three banks offering 4.6%, 5.0%, and 5.4%
 
 Most people choose Option B because:
 
@@ -22,10 +22,11 @@ SuperCluster applies this same principle to DeFi lending.
 Your USDC earns interest from established lending platforms where borrowers pay to use stablecoins:
 
 **Compound** — Efficient lending protocol with strong yields (typically 4-6% APY)  
+**Init** — Institutional-grade lending venue prioritized for stability and liquidity (typically 4-5.5% APY)  
 **Dolomite** — Decentralized lending platform with advanced risk management (typically 5-7% APY)
 
 ```
-Your Deposit → SuperCluster → Split between Compound & Dolomite → Borrowers pay interest → You earn yield
+Your Deposit → SuperCluster → Split across Compound (40%) + Init (30%) + Dolomite (30%) → Borrowers pay interest → You earn yield
 ```
 
 **What you do:** Deposit once  
@@ -36,13 +37,13 @@ Your Deposit → SuperCluster → Split between Compound & Dolomite → Borrower
 ### Better Returns
 
 Platforms offer different rates at different times. SuperCluster allocates more to higher-yielding platforms automatically.
-**Example:** If Compound offers 5% and Dolomite offers 6%, more funds go to Dolomite. When rates change across both platforms, the system rebalances automatically to maintain optimal returns.
+**Example:** If Compound offers 5.2%, Init offers 4.9%, and Dolomite offers 6.0%, the system leans slightly heavier to Dolomite while keeping the target 40/30/30 balance in mind. When rates change across all three platforms, the system rebalances automatically to maintain optimal returns.
 
 ### Lower Risk
 
 Spreading funds across platforms means if one has issues, only a portion of your deposit is affected—not everything.
 
-**Think of it like:** Having $5,000 in two banks instead of $10,000 in one. If one fails, you've still protected half your funds.
+**Think of it like:** Having $10,000 split $4,000 / $3,000 / $3,000 across three banks. If one fails, you still retain the majority of your funds.
 
 ### Better Liquidity
 

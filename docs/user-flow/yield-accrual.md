@@ -27,15 +27,18 @@ Deposited USDC generates yield from multiple lending protocols:
 flowchart TD
    A["Deposit (10,000 USDC)"]
    B["Pilot Strategy Allocation"]
-   C["Compound (50%)"]
-   D["Dolomite (50%)"]
-   F["Blended APY: +5.3%"]
+   C["Compound (40%)"]
+   D["Init (30%)"]
+   E["Dolomite (30%)"]
+   F["Blended APY: +5.82%"]
 
    A --> B
    B --> C
    B --> D
+   B --> E
    C --> F
    D --> F
+   E --> F
 ```
 
 ### Yield Calculation
@@ -45,9 +48,9 @@ flowchart TD
 ```
 Blended APY = Σ (Allocation % × Protocol APY)
 
-(50% × 6%) + (50% × 5.6%)
-= 3.0% + 2.8%
-= +5.8% APY
+(40% × 6.0%) + (30% × 5.4%) + (30% × 6.0%)
+= 2.40% + 1.62% + 1.80%
+= +5.82% APY
 ```
 
 ## Rebase Mechanism Explained
@@ -71,40 +74,41 @@ Your Holdings:
 
 ```
 Adapters harvest yield from protocols:
-- Compound: +3,000 USDC (50%)
-- Dolomite: +2,800 USDC (50%)
+- Compound: +2,400 USDC (40%)
+- Init: +1,620 USDC (30%)
+- Dolomite: +1,800 USDC (30%)
 -----------------------
-Total Yield: +5,800 USDC
+Total Yield: +5,820 USDC
 ```
 
 **Step 2: Exchange Rate Update**
 
 ```
-New Total Assets = 1,000,000 + 5,800 = 1,005,800 USDC
+New Total Assets = 1,000,000 + 5,820 = 1,005,820 USDC
 Total Supply = 1,000,000 sUSDC (unchanged)
 
-New Exchange Rate = 1,005,800 / 1,000,000 = 1.0058
+New Exchange Rate = 1,005,820 / 1,000,000 = 1.00582
 ```
 
 **Step 3: Balance Update**
 
 ```
 Your new balance = Shares × New Exchange Rate
-                 = 10,000 × 1.0058
-                 = 10,058 sUSDC
+                 = 10,000 × 1.00582
+                 = 10,058.2 sUSDC
 ```
 
 ### After Rebase
 
 ```
 Protocol State:
-- Total Assets: 1,005,800 USDC
+- Total Assets: 1,005,820 USDC
 - Total sUSDC Supply: 1,000,000 sUSDC (supply number unchanged)
-- Exchange Rate: 1.0058
+- Exchange Rate: 1.00582
 
 Your Holdings:
-- sUSDC Balance: 10,058 sUSDC (+58 sUSDC)
-- Value: 10,058 USDC (+58 USDC yield)
+- sUSDC Balance: 10,058.2 sUSDC (+58.2 sUSDC)
+- Value: 10,058.2 USDC (+58.2 USDC yield)
 ```
 
 **Process:**
@@ -260,10 +264,11 @@ The Pilot Strategy optimizes yield by rebalancing allocations:
 
 Protocol APY:
 
-- Compound: 6.0% (50% allocation)
-- Dolomite: 5.6% (50% allocation)
+- Compound: 6.0% (40% allocation)
+- Init: 5.4% (30% allocation)
+- Dolomite: 6.0% (30% allocation)
 
-Blended APY: 5.8%
+Blended APY: 5.82%
 
 ```
 
@@ -273,10 +278,11 @@ Blended APY: 5.8%
 
 New Allocation:
 
-- Compound: 6.5% (55% allocation) ← APY Increased!
-- Dolomite: 5.6% (45% allocation)
+- Compound: 6.3% (45% allocation) ← APY Increased!
+- Init: 5.2% (25% allocation)
+- Dolomite: 6.1% (30% allocation)
 
-New Blended APY: 6.07%
+New Blended APY: ~5.97%
 
 ```
 

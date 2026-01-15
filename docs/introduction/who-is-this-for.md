@@ -42,9 +42,10 @@ If you hold stablecoins and want them to work for you without sacrificing access
 >
 > - Deposits into SuperCluster
 > - Receives 10,000 sUSDC
-> - Earns ~5-7% APY from Compound and Dolomite lending
-> - After 1 year: ~10,500 sUSDC (automatically rebased)
-> - Can swap on DEX anytime or use as collateral in other protocols
+
+- Earns blended ~5-7% APY from Compound (40%), Init (30%), and Dolomite (30%) lending
+  > - After 1 year: ~10,500 sUSDC (automatically rebased)
+  > - Can swap on DEX anytime or use as collateral in other protocols
 
 **Primary Use Cases**
 
@@ -141,7 +142,7 @@ If you hold stablecoins and want them to work for you without sacrificing access
 
 - On-chain, auditable yield — All transactions visible and verifiable
 - Liquid treasury positions — Access funds anytime without breaking strategies
-- Diversified exposure — Funds allocated across Compound and Dolomite
+- Diversified exposure — Funds allocated across Compound, Init, and Dolomite
 - Governance-friendly — Compatible with multi-sig and DAO structures
 
 **Concrete Example**
@@ -294,7 +295,7 @@ SuperCluster is designed for **anyone who holds stablecoins and wants them to wo
 ### Core Requirements Met
 
 **Stable principal** — Stablecoin-only, no market volatility  
-**On-chain yield** — Real returns from Compound and Dolomite lending  
+**On-chain yield** — Real returns from Compound, Init, and Dolomite lending  
 **Full liquidity** — Instant access via liquid tokens  
 **Cross-protocol composability** — Use anywhere in DeFi
 
@@ -313,4 +314,4 @@ SuperCluster is designed for **anyone who holds stablecoins and wants them to wo
 
 SuperCluster functions as **shared DeFi infrastructure**, enabling both individuals and protocols to treat stablecoins as productive, liquid, and programmable assets.
 
-**It's not just a product — it's a new primitive for stablecoin savings built on Lisk Network.**
+**It's not just a product — it's a new primitive for stablecoin savings built on Mantle Network.**

@@ -82,7 +82,6 @@ sUSDC Minted = USDC Deposited / Exchange Rate
 - Provide liquidity on DEX
 - Use as collateral (with compatible protocols)
 - Participate in DeFi strategies
-- See [Use in DeFi](./use-in-defi.md)
 
 ### 5. Withdraw
 

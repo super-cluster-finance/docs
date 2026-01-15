@@ -6,9 +6,9 @@ pagination_next: introduction/problem
 
 ## What is SuperCluster?
 
-SuperCluster is a **DeFi Liquid Saving Protocol** that brings liquid staking mechanics to stablecoin-based savings. Built on **Lisk Network**, SuperCluster enables users to deposit USDC and earn yield from established lending protocols while maintaining liquidity through composable receipt tokens.
+SuperCluster is a **DeFi Liquid Saving Protocol** that brings liquid staking mechanics to stablecoin-based savings. Built on **Mantle Network**, SuperCluster enables users to deposit USDC and earn yield from established lending protocols while maintaining liquidity through composable receipt tokens.
 
-**Think of it as "Lido for stablecoins"** — but instead of staking volatile assets like ETH, SuperCluster focuses exclusively on stablecoins, allowing users to generate yield without exposure to market price fluctuations.
+**Think of it as "Lido for stablecoins"** but instead of staking volatile assets like ETH, SuperCluster focuses exclusively on stablecoins, allowing users to generate yield without exposure to market price fluctuations.
 
 ## Mission Statement
 
@@ -85,7 +85,7 @@ Ownership is represented entirely by transferable tokens, not vault shares.
 
 ## Project Background
 
-SuperCluster is developed as part of the Lisk Network Hackathon, with the goal of becoming production-grade infrastructure for stablecoin savings.
+SuperCluster is developed as part of the Mantle Network Hackathon, with the goal of becoming production-grade infrastructure for stablecoin savings.
 
 The protocol is designed with the following principles in mind:
 
@@ -113,22 +113,22 @@ The protocol is designed with the following principles in mind:
 
 ## Network and Assets
 
-- **Network:** Lisk Network
+- **Network:** Mantle Network
 - **Primary Asset:** USDC
-- **Integrated Protocols:** Compound, Dolomite
+- **Integrated Protocols:** Compound, Init, Dolomite
 
 **Receipt Tokens:**
 
 - **sUSDC:** Rebasing, yield-bearing token
 - **wsUSDC:** Wrapped, non-rebasing token
 
-## Why Lisk Network?
+## Why Mantle Network?
 
-Lisk Network provides optimal infrastructure for SuperCluster's liquid saving protocol:
+Mantle Network provides optimal infrastructure for SuperCluster's liquid saving protocol:
 
 - **Low Transaction Costs** — Enables frequent rebalancing and daily rebasing without high fees
 - **High Throughput** — Supports large-scale capital operations efficiently
-- **Growing DeFi Ecosystem** — Access to expanding lending protocols on Lisk
+- **Growing DeFi Ecosystem** — Access to expanding lending protocols on Mantle
 - **Ethereum-Grade Security** — Built on OP Stack for robust security guarantees
 - **Perfect for Capital-Intensive DeFi** — Infrastructure designed specifically for financial applications
 
@@ -136,7 +136,7 @@ Lisk Network provides optimal infrastructure for SuperCluster's liquid saving pr
 
 ## Current Status
 
-SuperCluster is currently in MVP development as part of the Lisk Network Hackathon. Prior to mainnet deployment, the protocol will undergo iterative testing, security reviews, and audit processes.
+SuperCluster is currently in MVP development as part of the Mantle Network Hackathon. Prior to mainnet deployment, the protocol will undergo iterative testing, security reviews, and audit processes.
 
 **Planned Phases:**
 
@@ -154,13 +154,13 @@ Hackathon MVP → Alpha Testing → Beta (Audited) → Production Launch
 | ------------------ | -------------------------------------------- |
 | Protocol Type      | Liquid Saving Protocol                       |
 | Primary Asset      | USDC                                         |
-| Network            | Lisk Network                                 |
-| Yield Sources      | Compound, Dolomite                           |
+| Network            | Mantle Network                               |
+| Yield Sources      | Compound, Init, Dolomite                     |
 | Token Model        | sToken / wsToken                             |
 | Development Status | Hackathon MVP                                |
 | Tech Stack         | Solidity, TypeScript, Foundry, NextJS, Privy |
 
-_This is the hackathon scope for Lisk Network. Additional yield sources and features will be added in production._
+_This is the hackathon scope for Mantle Network. Additional yield sources and features will be added in production._
 
 ---
 
